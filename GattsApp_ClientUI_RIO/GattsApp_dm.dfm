@@ -6,7 +6,6 @@ object DM: TDM
     Active = False
     ClientType = ctNonBlocking
     Port = 8080
-    OnLookup = ClientSocket1Lookup
     OnConnecting = ClientSocket1Connecting
     OnConnect = ClientSocket1Connect
     OnDisconnect = ClientSocket1Disconnect

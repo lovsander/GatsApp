@@ -105,7 +105,7 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="GattsAppClient_MainForm.pas">
-            <Form>Form1</Form>
+            <Form>GattsAppMainForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="GattsAppClient_Styles.pas"/>
@@ -140,10 +140,10 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="res\bell-_44.png" Configuration="Debug" Class="UWP_DelphiLogo44">
+                <DeployFile LocalName="res\bell-_150.png" Configuration="Debug" Class="UWP_DelphiLogo150">
                     <Platform Name="Win32">
                         <RemoteDir>Assets\</RemoteDir>
-                        <RemoteName>Logo44x44.png</RemoteName>
+                        <RemoteName>Logo150x150.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -153,10 +153,10 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="res\bell-_150.png" Configuration="Debug" Class="UWP_DelphiLogo150">
+                <DeployFile LocalName="res\bell-_44.png" Configuration="Debug" Class="UWP_DelphiLogo44">
                     <Platform Name="Win32">
                         <RemoteDir>Assets\</RemoteDir>
-                        <RemoteName>Logo150x150.png</RemoteName>
+                        <RemoteName>Logo44x44.png</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

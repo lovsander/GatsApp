@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net"
 	"os"
@@ -28,6 +29,11 @@ func main() {
 	//
 }
 
+type clientStruct struct {
+	User    string `json:"user"`
+	Message string `json:"message"`
+}
+
 func handleClient(conn net.Conn, exit chan os.Signal) {
 	go func(conn net.Conn, c chan os.Signal) {
 		<-c
@@ -35,19 +41,31 @@ func handleClient(conn net.Conn, exit chan os.Signal) {
 		conn.Close()
 	}(conn, exit)
 
-	buf := make([]byte, 32) // буфер для чтения клиентских данных
+	buf := make([]byte, 250) // буфер для чтения клиентских данных
 	for {
-		conn.Write([]byte("Hello, what's your name?\n")) // пишем в сокет
+		conn.Write([]byte("Server listening...\n")) // пишем в сокет
 
 		readLen, err := conn.Read(buf) // читаем из сокета
 		if err != nil {
 			fmt.Println(err)
 			break
 		}
-		fmt.Println("got", conn.RemoteAddr().String(), string(buf[:readLen]))
-		ans := append([]byte("Goodbye, "), buf[:readLen]...)
-		ans = append(ans, "\r\n"...)
-		conn.Write(ans) // пишем в сокет
+		var cs clientStruct
+		if err := json.Unmarshal(buf[:readLen], &cs); err != nil {
+			fmt.Println(err)
+		}
 
+		if cs.Message == "" && cs.User != "" {
+			fmt.Println("Connected new client:", cs.User, conn.RemoteAddr().String())
+			conn.Write([]byte("Connection Ok\r\n")) // пишем в сокет
+		} else {
+			fmt.Println("Client Addr:", conn.RemoteAddr().String(), ", Name:", cs.User, ", Message:", cs.Message)
+
+			ans := append([]byte("Got from: "), []byte(cs.User)...)
+			ans = append(ans, []byte(" : ")...)
+			ans = append(ans, []byte(cs.Message)...)
+			ans = append(ans, "\r\n"...)
+			conn.Write(ans) // пишем в сокет
+		}
 	}
 }
