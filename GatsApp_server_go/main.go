@@ -9,8 +9,13 @@ import (
 	"syscall"
 )
 
+type ClientsConnections map[string]string
+
+var cliCons ClientsConnections
+
 func main() {
 	fmt.Println("Server started")
+	cliCons = make(ClientsConnections)
 
 	exit := make(chan os.Signal, 1) // we need to reserve to buffer size 1, so the notifier are not blocked
 	signal.Notify(exit, os.Interrupt, syscall.SIGTERM)
@@ -57,7 +62,9 @@ func handleClient(conn net.Conn, exit chan os.Signal) {
 
 		if cs.Message == "" && cs.User != "" {
 			fmt.Println("Connected new client:", cs.User, conn.RemoteAddr().String())
-			conn.Write([]byte("Connection Ok\r\n")) // пишем в сокет
+			conn.Write([]byte("Connection Ok\r\n"))       // пишем в сокет
+			cliCons[conn.RemoteAddr().String()] = cs.User // fill global map with addr&names
+			fmt.Println("All clients", cliCons)
 		} else {
 			fmt.Println("Client Addr:", conn.RemoteAddr().String(), ", Name:", cs.User, ", Message:", cs.Message)
 

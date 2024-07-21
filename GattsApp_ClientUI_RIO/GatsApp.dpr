@@ -6,7 +6,10 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   GattsAppClient_Styles in 'GattsAppClient_Styles.pas',
-  GattsApp_dm in 'GattsApp_dm.pas' {DM: TDataModule};
+  GattsApp_dm in 'GattsApp_dm.pas' {DM: TDataModule},
+  GattsApp_SplashScreenStartup in 'GattsApp_SplashScreenStartup.pas' {SplashScreenStartup},
+  dxGDIPlusClasses in 'dxGDIPlusClasses.pas',
+  SplashScreen in 'SplashScreen.pas';
 
 {$R *.res}
 

@@ -11,6 +11,7 @@ object GattsAppMainForm: TGattsAppMainForm
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnShow = FormShow
@@ -55,8 +56,6 @@ object GattsAppMainForm: TGattsAppMainForm
     Align = alLeft
     Caption = #1087#1072#1085#1077#1083#1100' '#1074#1099#1079#1086#1074#1086#1074
     TabOrder = 1
-    ExplicitLeft = 8
-    ExplicitHeight = 624
     object Panel8: TPanel
       Left = 1
       Top = 42
@@ -353,7 +352,6 @@ object GattsAppMainForm: TGattsAppMainForm
       Align = alBottom
       Caption = #1055#1086#1076#1090#1074#1077#1088#1076#1080#1090#1100
       TabOrder = 2
-      ExplicitTop = 603
     end
     object Button2: TButton
       Left = 1
@@ -363,7 +361,6 @@ object GattsAppMainForm: TGattsAppMainForm
       Align = alBottom
       Caption = #1054#1090#1082#1072#1079#1072#1090#1100#1089#1103
       TabOrder = 3
-      ExplicitTop = 583
     end
     object Button3: TButton
       Left = 1
@@ -373,7 +370,6 @@ object GattsAppMainForm: TGattsAppMainForm
       Align = alBottom
       Caption = #1055#1077#1088#1077#1085#1077#1089#1090#1080
       TabOrder = 4
-      ExplicitTop = 553
     end
   end
   object Panel3: TPanel
@@ -389,7 +385,6 @@ object GattsAppMainForm: TGattsAppMainForm
     Font.Style = []
     ParentFont = False
     TabOrder = 2
-    ExplicitTop = 401
     object cbStyles: TComboBox
       AlignWithMargins = True
       Left = 4
@@ -436,8 +431,6 @@ object GattsAppMainForm: TGattsAppMainForm
     Color = clCream
     ParentBackground = False
     TabOrder = 3
-    ExplicitTop = 41
-    ExplicitHeight = 624
     object Memo1: TMemo
       Left = 1
       Top = 1
@@ -454,7 +447,6 @@ object GattsAppMainForm: TGattsAppMainForm
       ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0
-      ExplicitHeight = 581
     end
     object Panel10: TPanel
       Left = 1
@@ -466,8 +458,6 @@ object GattsAppMainForm: TGattsAppMainForm
       Color = clMoneyGreen
       ParentBackground = False
       TabOrder = 1
-      ExplicitLeft = 5
-      ExplicitTop = 583
       object Edit1: TEdit
         Left = 1
         Top = 1
@@ -482,9 +472,6 @@ object GattsAppMainForm: TGattsAppMainForm
         ParentFont = False
         TabOrder = 0
         OnKeyPress = Edit1KeyPress
-        ExplicitLeft = 18
-        ExplicitTop = 0
-        ExplicitWidth = 271
         ExplicitHeight = 41
       end
       object bSend: TButton
