@@ -16,12 +16,12 @@ var
     RegStyleKey: string = 'Style';
 
   public
+    constructor Create;
+    destructor Destroy;
     function GetStylesStrings: TArray<string>;
     function GetDefaultStyle: string;
     function ApplyStyle(const Name: string): Boolean;
 
-    constructor Create;
-    destructor Destroy;
   end;
 
 
@@ -29,21 +29,6 @@ var
 implementation
 
 { AppStyles }
-
-function TAppStyles.ApplyStyle(const Name: string): Boolean;
-begin
-  if Assigned(TStyleManager.ActiveStyle) and
-    (TStyleManager.ActiveStyle.Name <> Name) then
-  begin
-    TStyleManager.TrySetStyle(Name);
-    RegFile.WriteString(RegStyleKey, 'Value', Name);
-  end
-  else
-  begin
-    TStyleManager.TrySetStyle(fdefaultStyleName);
-    RegFile.WriteString(RegStyleKey, 'Value', fdefaultStyleName);
-  end;
-end;
 
 constructor TAppStyles.Create;
 var
@@ -77,5 +62,19 @@ begin
  Result:= TStyleManager.StyleNames;
 end;
 
+function TAppStyles.ApplyStyle(const Name: string): Boolean;
+begin
+  if Assigned(TStyleManager.ActiveStyle) and
+    (TStyleManager.ActiveStyle.Name <> Name) then
+  begin
+    TStyleManager.TrySetStyle(Name);
+    RegFile.WriteString(RegStyleKey, 'Value', Name);
+  end
+  else
+  begin
+    TStyleManager.TrySetStyle(fdefaultStyleName);
+    RegFile.WriteString(RegStyleKey, 'Value', fdefaultStyleName);
+  end;
+end;
 
 end.

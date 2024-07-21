@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
-  System.Classes, Vcl.Graphics, GattsAppClient_Styles,
+  System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
   SplashScreen, pngimage;
 
@@ -14,8 +14,6 @@ type
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
-    cbStyles: TComboBox;
-    bApplyStyle: TButton;
     Panel8: TPanel;
     BitBtn4: TBitBtn;
     Panel9: TPanel;
@@ -28,15 +26,15 @@ type
     Edit1: TEdit;
     bSend: TButton;
     bConn: TButton;
+    bSettings: TBitBtn;
     procedure FormCreate(Sender: TObject);
-    procedure bApplyStyleClick(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure bConnClick(Sender: TObject);
     procedure bSendClick(Sender: TObject);
     procedure Edit1KeyPress(Sender: TObject; var Key: Char);
     procedure FormShow(Sender: TObject);
+    procedure bSettingsClick(Sender: TObject);
   private
-
     splash: TSplash;
   public
     StrMessage: String;
@@ -44,18 +42,16 @@ type
 
 var
   GattsAppMainForm: TGattsAppMainForm;
-  AppStyles: TAppStyles;
 
 implementation
 
 uses
-  GattsApp_dm, JSON, GattsApp_SplashScreenStartup;
+  GattsApp_dm, JSON, GattsApp_SplashScreenStartup,GattsApp_SettingsForm;
 
 {$R *.dfm}
 
 procedure TGattsAppMainForm.FormCreate(Sender: TObject);
 var
-  name: string;
   png: TPNGImage;
 begin
   png := TPNGImage.Create;
@@ -69,10 +65,6 @@ begin
     png.Free;
   end;
 
-  AppStyles := TAppStyles.Create;
-  cbStyles.Text := AppStyles.GetDefaultStyle;
-  for name in AppStyles.GetStylesStrings do
-    cbStyles.Items.add(name);
 
   Self.Caption := 'Чат собраний для судебных работников';
 end;
@@ -80,7 +72,6 @@ end;
 procedure TGattsAppMainForm.FormDestroy(Sender: TObject);
 begin
   splash.Free;
-  AppStyles.Free;
 end;
 
 procedure TGattsAppMainForm.FormShow(Sender: TObject);
@@ -94,8 +85,9 @@ begin
   Memo1.Text := '';
   if (dm.ClientSocket1.Socket.Connected = false) then
   begin
-    dm.ClientSocket1.Address := '127.0.0.1';
-    dm.ClientSocket1.Port := 8080;
+    Memo1.Text := ServerInfo.Address +':'+ IntToStr(ServerInfo.Port)+ #13#10;;
+    dm.ClientSocket1.Address := ServerInfo.Address;
+    dm.ClientSocket1.Port := ServerInfo.Port;
     dm.ClientSocket1.Open;
   end
   else
@@ -121,15 +113,15 @@ begin
   end;
 end;
 
+procedure TGattsAppMainForm.bSettingsClick(Sender: TObject);
+begin
+  SettingsForm.ShowModal;
+end;
+
 procedure TGattsAppMainForm.Edit1KeyPress(Sender: TObject; var Key: Char);
 begin
   if Ord(Key) = VK_RETURN then
     bSend.Click;
-end;
-
-procedure TGattsAppMainForm.bApplyStyleClick(Sender: TObject);
-begin
-  AppStyles.ApplyStyle(cbStyles.Text);
 end;
 
 end.

@@ -9,7 +9,9 @@ uses
   GattsApp_dm in 'GattsApp_dm.pas' {DM: TDataModule},
   GattsApp_SplashScreenStartup in 'GattsApp_SplashScreenStartup.pas' {SplashScreenStartup},
   dxGDIPlusClasses in 'dxGDIPlusClasses.pas',
-  SplashScreen in 'SplashScreen.pas';
+  SplashScreen in 'SplashScreen.pas',
+  GattsApp_SettingsForm in 'GattsApp_SettingsForm.pas' {SettingsForm},
+  GattaApp_ServerInfo in 'GattaApp_ServerInfo.pas';
 
 {$R *.res}
 
@@ -18,6 +20,7 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Aqua Graphite');
   Application.CreateForm(TGattsAppMainForm, GattsAppMainForm);
+  Application.CreateForm(TSettingsForm, SettingsForm);
   Application.CreateForm(TDM, DM);
   Application.Run;
 end.
