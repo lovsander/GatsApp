@@ -21,7 +21,7 @@ object GattsAppMainForm: TGattsAppMainForm
     Left = 0
     Top = 0
     Width = 852
-    Height = 35
+    Height = 40
     Align = alTop
     Caption = #1070#1076#1080#1085#1072' '#1042#1072#1083#1077#1085#1090#1080#1085#1072
     Font.Charset = DEFAULT_CHARSET
@@ -35,7 +35,7 @@ object GattsAppMainForm: TGattsAppMainForm
       Left = 39
       Top = 1
       Width = 72
-      Height = 33
+      Height = 38
       Align = alLeft
       Caption = 'Connect'
       Font.Charset = DEFAULT_CHARSET
@@ -46,13 +46,13 @@ object GattsAppMainForm: TGattsAppMainForm
       ParentFont = False
       TabOrder = 0
       OnClick = bConnClick
-      ExplicitLeft = 1
+      ExplicitHeight = 33
     end
     object bSettings: TBitBtn
       Left = 1
       Top = 1
       Width = 38
-      Height = 33
+      Height = 38
       Align = alLeft
       Cancel = True
       DoubleBuffered = False
@@ -190,18 +190,18 @@ object GattsAppMainForm: TGattsAppMainForm
       ModalResult = 5
       TabOrder = 1
       OnClick = bSettingsClick
-      ExplicitLeft = -15
-      ExplicitTop = -4
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 35
+    Top = 40
     Width = 313
-    Height = 374
+    Height = 369
     Align = alLeft
     Caption = #1087#1072#1085#1077#1083#1100' '#1074#1099#1079#1086#1074#1086#1074
     TabOrder = 1
+    ExplicitTop = 35
+    ExplicitHeight = 374
     object Panel8: TPanel
       Left = 1
       Top = 42
@@ -492,30 +492,33 @@ object GattsAppMainForm: TGattsAppMainForm
     end
     object Button1: TButton
       Left = 1
-      Top = 343
+      Top = 338
       Width = 311
       Height = 30
       Align = alBottom
       Caption = #1055#1086#1076#1090#1074#1077#1088#1076#1080#1090#1100
       TabOrder = 2
+      ExplicitTop = 343
     end
     object Button2: TButton
       Left = 1
-      Top = 313
+      Top = 308
       Width = 311
       Height = 30
       Align = alBottom
       Caption = #1054#1090#1082#1072#1079#1072#1090#1100#1089#1103
       TabOrder = 3
+      ExplicitTop = 313
     end
     object Button3: TButton
       Left = 1
-      Top = 283
+      Top = 278
       Width = 311
       Height = 30
       Align = alBottom
       Caption = #1055#1077#1088#1077#1085#1077#1089#1090#1080
       TabOrder = 4
+      ExplicitTop = 283
     end
   end
   object Panel3: TPanel
@@ -534,19 +537,21 @@ object GattsAppMainForm: TGattsAppMainForm
   end
   object Panel4: TPanel
     Left = 313
-    Top = 35
+    Top = 40
     Width = 539
-    Height = 374
+    Height = 369
     Align = alClient
     Caption = 'Panel4'
     Color = clCream
     ParentBackground = False
     TabOrder = 3
+    ExplicitTop = 35
+    ExplicitHeight = 374
     object Memo1: TMemo
       Left = 1
       Top = 1
       Width = 537
-      Height = 331
+      Height = 326
       Align = alClient
       Color = clMoneyGreen
       Font.Charset = DEFAULT_CHARSET
@@ -558,10 +563,11 @@ object GattsAppMainForm: TGattsAppMainForm
       ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0
+      ExplicitHeight = 331
     end
     object Panel10: TPanel
       Left = 1
-      Top = 332
+      Top = 327
       Width = 537
       Height = 41
       Align = alBottom
@@ -569,6 +575,7 @@ object GattsAppMainForm: TGattsAppMainForm
       Color = clMoneyGreen
       ParentBackground = False
       TabOrder = 1
+      ExplicitTop = 332
       object Edit1: TEdit
         Left = 1
         Top = 1

@@ -1,27 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.600,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsApp_dm.dfm=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.495,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsAppClient_MainForm.pas=C:\_PONY_EXPRESS\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.371,=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.761,=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.248,=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.244,C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SplashScreenStartup.dfm=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.504,C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\dxGDIPlusClasses.pas=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.660,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsAppClient_Styles.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.840,=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.901,=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\SplashScreen.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.458,=D:\_PONY_EXPRESS\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.600,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsApp_dm.pas=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.244,C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SplashScreenStartup.pas=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.660,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsAppClient_Styles.pas=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.320,=D:\_PONY_EXPRESS\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.495,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsAppClient_MainForm.dfm=C:\_PONY_EXPRESS\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.535,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GatsApp.dproj=C:\_PONY_EXPRESS\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.458,=D:\_PONY_EXPRESS\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.495,C:\_PONY_EXPRESS\Unit1.dfm=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsAppClient_MainForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.840,=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.600,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.dfm=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsApp_dm.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.206,=C:\_PONY_EXPRESS\Unit1.pas</Transaction>
-    <Transaction>2024.07.21 15:04:57.727,=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>2024.07.21 15:17:00.726,D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SettingsForm.pas=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>2024.07.21 15:17:00.726,D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SettingsForm.dfm=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.dfm</Transaction>
-    <Transaction>2024.07.21 15:44:20.954,=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
-    <Transaction>2024.07.21 15:45:04.742,D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattaApp_ServerInfo.pas=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.495,C:\_PONY_EXPRESS\Unit1.pas=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsAppClient_MainForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.244,C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.dfm=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SplashScreenStartup.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.600,C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\Unit1.pas=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GattsApp_dm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.954,=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SettingsForm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.727,=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.535,C:\_PONY_EXPRESS\Project1.dproj=C:\_PONY_EXPRESS\tests\GattsApp_ClientUI_RIO\GatsApp.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.901,=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\SplashScreen.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.742,D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattaApp_ServerInfo.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.244,C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SplashScreenStartup.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.504,C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\dxGDIPlusClasses.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.761,=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.371,=C:\Users\user\Documents\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.726,D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\Unit1.dfm=D:\GitHub\GatsApp\GattsApp_ClientUI_RIO\GattsApp_SettingsForm.dfm</Transaction>
   </Transactions>
 </BorlandProject>
