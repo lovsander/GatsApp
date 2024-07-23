@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  SplashScreen, pngimage;
+  SplashScreen;
 
 type
   TGattsAppMainForm = class(TForm)
@@ -46,27 +46,17 @@ var
 implementation
 
 uses
-  GattsApp_dm, JSON, GattsApp_SplashScreenStartup,GattsApp_SettingsForm;
+  GattsApp_dm, JSON, GattsApp_SplashScreenStartup, GattsApp_SettingsForm;
 
 {$R *.dfm}
 
 procedure TGattsAppMainForm.FormCreate(Sender: TObject);
-var
-  png: TPNGImage;
 begin
-  png := TPNGImage.Create;
-  try
-    png.LoadFromFile('./res/gatChat.png');
-    splash := TSplash.Create(png);
-    splash.Show(false);
-    Sleep(2000);
-    splash.Close;
-  finally
-    png.Free;
-  end;
-
-
   Self.Caption := 'Чат собраний для судебных работников';
+  splash := TSplash.Create;
+  splash.Image.LoadFromFile('./res/gatChat.png');
+  splash.Show(false);
+  Sleep(2000);
 end;
 
 procedure TGattsAppMainForm.FormDestroy(Sender: TObject);
@@ -76,6 +66,7 @@ end;
 
 procedure TGattsAppMainForm.FormShow(Sender: TObject);
 begin
+  splash.Close;
   bConn.SetFocus;
 end;
 
@@ -85,7 +76,8 @@ begin
   Memo1.Text := '';
   if (dm.ClientSocket1.Socket.Connected = false) then
   begin
-    Memo1.Text := ServerInfo.Address +':'+ IntToStr(ServerInfo.Port)+ #13#10;;
+    Memo1.Text := ServerInfo.Address + ':' + IntToStr(ServerInfo.Port)
+      + #13#10;;
     dm.ClientSocket1.Address := ServerInfo.Address;
     dm.ClientSocket1.Port := ServerInfo.Port;
     dm.ClientSocket1.Open;
